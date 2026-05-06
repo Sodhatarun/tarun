@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    background-color: #fff5f5;
+    color: #4a4a4a;
+    text-align: center;
+}
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); /* Replace with your wedding photo URL */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.message {
+    padding: 80px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.photo-placeholder {
+    width: 250px;
+    height: 250px;
+    background-color: #fad0c4;
+    margin: 30px auto;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    color: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.timeline {
+    background-color: white;
+    padding: 50px 0;
+}
+
+.event {
+    margin-bottom: 30px;
+}
+
+footer {
+    padding: 40px;
+    font-size: 0.9rem;
+    color: #999;
+}
+
+.start-screen {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff5f5;
+}
+
+.question-screen {
+    height: 100vh;
+    display: none; /* IMPORTANT */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff5f5;
+}
+
+button {
+    padding: 12px 25px;
+    margin: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    background: #ff6b81;
+    color: white;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff4757;
+}
+
+
+
+#questionScreen {
+    display: none;
+}
+
+#mainContent {
+    display: none;
+}
+.hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+.heart {
+    position: absolute;
+    color: #ff4d6d;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% { transform: translateY(-10%); opacity: 1; }
+    100% { transform: translateY(110vh); opacity: 0; }
+}
+
+@keyframes fallConfetti {
+    to {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    .message { padding: 40px 15px; }
+    button { font-size: 16px; }
+}
